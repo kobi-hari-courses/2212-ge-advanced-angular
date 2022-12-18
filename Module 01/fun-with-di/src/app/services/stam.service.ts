@@ -5,37 +5,20 @@ import { Injectable } from '@angular/core';
 })
 export class StamService {
 
+    private counter = 0;
+
   constructor() { }
-}
 
+  getSomeString() {
+    return 'Hello World ' + this.counter++;
+  }
 
-interface Person {
-    name: string;
-    age?: number;
-}
-
-class Dog {
-    name: string = '';
-    age: number = 0;
-    print(): void {
-        console.log('My dog is printing');
-    }
+  async init(): Promise<void> {
+    console.log('Starting init of Stam Service');
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    console.log('Completed init of Stam Service');
+  }
 }
 
 
 
-function rollDye() : 1 | 2| 3 | 4 | 5 | 6{
-    return 4;
-}
-
-interface Printable {
-    print(): void;
-}
-
-function doSomethingAndPrint(p: Person) {
-    let b: number = p.age!;
-
-    if ((b === 5) || (b === 3)) {
-        const g = b;
-    }
-}
