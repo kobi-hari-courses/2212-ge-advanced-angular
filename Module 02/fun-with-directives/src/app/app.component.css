@@ -3,3 +3,25 @@ img {
     height: 100px;
     object-fit: cover;
 }
+
+.owner {
+    position:relative;
+}
+
+.first {
+    width: 100px;
+    height: 150px;
+    background-color: lightblue;
+}
+
+.second {
+    --x: 0px;
+    --y: 0px;
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    pointer-events: none;
+}

@@ -21,4 +21,8 @@ export class AppComponent implements OnInit {
         }, 3000);
     }
 
+    log(something: any) {
+        console.log(something);
+    }
+
 }

@@ -3,6 +3,12 @@
 <h3 highlight>Agenda</h3>
 <img src="https://images.pexels.com/photos/1003914/pexels-photo-1003914.jpeg?auto=compress&cs=tinysrgb&w=1600">
 <img src="https://thumbs.dreamstime.com/b/rose-flower-love-garden-plant-backgrounds-valentines-day-49504517.jpg">
+<app-blank highlight #mashu="highlight" (click)="log(mashu)"></app-blank>
+<div class="owner">
+    <div class="first" mouseFollow #coords="mouseFollow"></div>
+    <div class="second" [style.--y]="coords.y" [style.--x]="coords.x"></div>
+</div>
+
 <ul>
     <li class="x">What are Directives</li>
     <li>Creating a directive</li>

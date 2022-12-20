@@ -1,0 +1,7 @@
+body {
+    --kobi: green;
+}
+
+input[type="number"] {
+    background-color: var(--kobi);
+}

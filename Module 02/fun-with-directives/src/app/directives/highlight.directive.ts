@@ -2,7 +2,8 @@ import { outputAst } from "@angular/compiler";
 import { Directive, ElementRef, EventEmitter, HostBinding, HostListener, Input, OnInit, Output, Renderer2 } from "@angular/core";
 
 @Directive({
-    selector: '[highlight]'
+    selector: '[highlight]', 
+    exportAs: 'highlight'
 })
 export class HighlightDirective implements OnInit {
 
@@ -52,6 +53,6 @@ export class HighlightDirective implements OnInit {
     }
 
     ngOnInit(): void {
-        this.bg = this.color;
+        this.bg = this.color || 'yellow';
     }
 }
