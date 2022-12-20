@@ -1,0 +1,19 @@
+<div class="header-area">
+    <ng-content select="[expanderHeader]"></ng-content>
+</div>
+
+<div class="content-area" *ngIf="isOpen">
+    <ng-content></ng-content>
+</div>
+
+<div class="button-area">
+    <ng-container *ngIf="doesToggleButtonExist">
+        <ng-content select="button[expanderToggle]"></ng-content>
+    </ng-container>
+    <ng-container *ngIf="!doesToggleButtonExist">
+        <button (click)="toggle()">
+            <span *ngIf="isOpen">-</span>
+            <span *ngIf="!isOpen">+</span>
+        </button>
+    </ng-container>
+</div>

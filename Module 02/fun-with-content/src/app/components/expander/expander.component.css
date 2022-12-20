@@ -1,0 +1,30 @@
+:host {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    border: 1px solid gray; 
+    margin: 4px;   
+}
+
+.header-area {
+    grid-row: 1;
+    grid-column: 2;
+    padding: 4px;
+    background: rgb(211, 211, 211);
+}
+
+.button-area {
+    grid-row: 1;
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(211, 211, 211);
+    padding: 4px;
+}
+
+.content-area {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    padding: 4px;
+}

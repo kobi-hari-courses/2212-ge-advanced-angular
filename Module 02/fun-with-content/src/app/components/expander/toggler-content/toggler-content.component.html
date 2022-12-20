@@ -1,0 +1,6 @@
+<span *ngIf="expander?.isOpen">
+    <ng-content select="[expanderLabelOn]"></ng-content>
+</span>
+<span *ngIf="!expander?.isOpen">
+    <ng-content select="[expanderLabelOff]"></ng-content>
+</span>
