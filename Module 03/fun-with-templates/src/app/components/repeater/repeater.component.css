@@ -1,0 +1,11 @@
+:host {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+}
+
+.divider {
+    align-self: stretch;
+    background-color: gray;
+    height: 2px;
+}

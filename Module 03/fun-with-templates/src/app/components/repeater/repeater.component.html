@@ -1,0 +1,5 @@
+<ng-container *ngIf="template">
+    <ng-container *ngTemplateOutlet="template; context:{mispar: 1, color: 'green'}"></ng-container>
+    <div class="divider"></div>
+    <ng-container *ngTemplateOutlet="template; context:{mispar: 2, color: 'red'}"></ng-container>
+</ng-container>
