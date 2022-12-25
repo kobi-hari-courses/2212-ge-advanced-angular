@@ -52,3 +52,13 @@
 * We have created our own implementation of `ngIf`
 * Finally we used structural diretives and the microsyntax to allow for easier creation of templates as parameters for compound components.
     - Specifically, we injected a template from the component content, using `@ContentChild`
+
+### `ViewChild` and `ViewChildren`
+* We understood the meaning of "View" in angular
+* We saw the `AfterViewInit` lifecycle hook
+* We saw how to grab various view items using the `ViewChild` decorator:
+    * ElementRef
+    * ViewContainerRef
+    * TemplateRef
+    * Components and Directives
+* We saw how to use reference strings to access elements as view children

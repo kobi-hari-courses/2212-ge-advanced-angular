@@ -1,3 +1,26 @@
 <button (click)="toggleMessage()">Toggle</button>
 
 <h2 *myIf="showMessage">It works!!! woo hooo</h2>
+
+<ng-template #mytemplate1 let-color="color">
+    <h1 [style.color]="color">Hello World 1</h1>
+</ng-template>
+
+<ng-template #mytemplate2 let-size="size">
+    <h1 [style.font-size]="size">Hello World 2</h1>
+</ng-template>
+
+<button></button>
+
+<ul>
+    <li>dfsdfds</li>
+    <li>xcgds</li>
+</ul>
+
+<app-blank appStam></app-blank>
+
+<h1>Here is the template:</h1>
+<ng-container *ngFor="let temp of myTemps">
+    <ng-container *ngTemplateOutlet="temp"></ng-container>
+</ng-container>
+

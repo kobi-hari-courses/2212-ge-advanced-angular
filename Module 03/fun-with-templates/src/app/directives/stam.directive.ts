@@ -20,6 +20,9 @@ export class StamDirective implements OnInit {
     ngOnInit(): void {
         console.log('View Container Ref', this.vref);
         console.log('Template', this.template);
+
+        if (!this.template) return;
+
         const v1: EmbeddedViewRef<any> =  this.vref.createEmbeddedView(this.template);
         const v2: ComponentRef<BlankComponent> = this.vref.createComponent(BlankComponent);
         console.log('v1', v1);
