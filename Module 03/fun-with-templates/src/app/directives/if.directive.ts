@@ -4,7 +4,7 @@ import { Directive, Input, OnChanges, SimpleChanges, TemplateRef, ViewContainerR
     selector: '[myIf]'
 })
 export class IfDirective implements OnChanges {
-    @Input()
+    @Input('myIf')
     condition: boolean = true;
 
 
