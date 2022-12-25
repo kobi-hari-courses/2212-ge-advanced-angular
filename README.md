@@ -18,6 +18,7 @@
 ## Advanced Modules
 * [Module 01 - Dependency Injection](Module%2001/README.md)
 * [Module 02 - Directives and Content](Module%2002/README.md)
+* [Module 03 - Templates, Views and Structural Directives](Module%2003/README.md)
 
 
 ## Useful Links

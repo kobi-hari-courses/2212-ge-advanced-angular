@@ -1,5 +1,12 @@
 ## Module 02 - Custom Directives and Content Projection
 
+### Projects:
+|     |     |
+| --- | --- |
+| [fun-with-directives](fun-with-directives/) | Element Directives in Angular |
+| [fun-with-content](fun-with-content/) | Content Projection in Angular |
+
+
 ### Introcution to Element Directives
 * We talked about what is a directive and how it works internaly
 * We talked about `ElementRef` and how to pass it to the directive and use it to change the properties of the host
