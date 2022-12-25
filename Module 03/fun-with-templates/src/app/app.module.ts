@@ -7,6 +7,7 @@ import { TitleComponent } from './components/title/title.component';
 import { StamDirective } from './directives/stam.directive';
 import { BlankComponent } from './components/blank/blank.component';
 import { IfDirective } from './directives/if.directive';
+import { RepeatDirective } from './directives/repeat.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { IfDirective } from './directives/if.directive';
     TitleComponent,
     StamDirective,
     BlankComponent,
-    IfDirective
+    IfDirective,
+    RepeatDirective
   ],
   imports: [
     BrowserModule

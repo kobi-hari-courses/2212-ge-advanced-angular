@@ -5,3 +5,7 @@ td {
 table {
     border-collapse: collapse;
 }
+
+h2 {
+    margin: 0px;
+}
