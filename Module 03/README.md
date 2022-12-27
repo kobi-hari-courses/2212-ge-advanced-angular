@@ -3,6 +3,9 @@
 ### Projects:
 |     |     |
 | --- | --- |
+| [fun-with-templates](./fun-with-templates/) | Templates, Containers and Structural directives |
+| [notepad](./notepad/) | A practical example of customizable compound component |
+
 
 
 ### Containers and Templates
