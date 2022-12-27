@@ -1,0 +1,27 @@
+<div class="colors-area">
+    <app-string-selector [options]="colors" [selected]="selectedColor" (selection)="selectColor($event)">
+        <span *itemTemplate="let item; let selected=selected" 
+            [style.background]="selected ? item : 'transparent'"
+            [style.color]="selected ? 'white' : item"
+        >{{item}}</span>
+    </app-string-selector>
+</div>
+<div class="sizes-area">
+    <app-string-selector [options]="sizes" [selected]="selectedSize"
+        (selection)="selectSize($event)">
+        <span *itemTemplate="let item; let selected=selected" 
+            [style.font-size]="item"
+            [class.selected-item]="selected"
+            >{{item}}</span>
+    </app-string-selector>
+</div>
+<div class="fonts-area">
+    <app-string-selector [options]="fonts" [selected]="selectedFont"
+        (selection)="selectFont($event)">
+        <span *itemTemplate="let item" [style.font-family]="item">{{item}}</span>
+    </app-string-selector>
+</div>
+<div class="text-area">
+    <textarea [style.color]="selectedColor" [style.font-size]="selectedSize"
+        [style.font-family]="selectedFont"></textarea>
+</div>

@@ -1,0 +1,28 @@
+:host {
+    display: flex;
+    flex-direction: column;
+
+    div {
+         
+        border: 1px solid lightgray;
+        margin: 4px;
+        padding: 4px;
+        border-radius: 12px;
+        user-select: none;
+        cursor: pointer;
+        transition: 0.5s;
+        display: flex;
+
+        &.selected {
+            background-color: var(--selector-selected-background, rgb(255, 255, 222));
+        }
+
+        &:hover {
+            background-color: rgb(213, 235, 242);
+            transform: scale(1.04);
+        }
+
+
+    }
+}
+
