@@ -1,4 +1,4 @@
-<button (click)="go()">GO!</button>
+<!-- <button (click)="go()">GO!</button>
 <button (click)="toggleReader()">Toggle Reader</button>
 <hr>
 <app-counter-reader *ngIf="showReader">
@@ -7,4 +7,9 @@
 <hr>
 <app-counter-writer>
 
-</app-counter-writer>
+</app-counter-writer> -->
+
+<input type="search" #searchBox (input)="search$.next(searchBox.value)">
+<span class="loader" *ngIf="isBusy$ | async"></span>
+<hr>
+<div *ngFor="let color of results$ | async" [style.background]="color.code">{{color.displayName}}</div>

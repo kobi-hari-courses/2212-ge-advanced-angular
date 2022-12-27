@@ -1,28 +1,29 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { CounterService } from 'src/app/service/counter.service';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
+import { CounterService } from 'src/app/services/counter.service';
 
 @Component({
     selector: 'app-counter-reader',
     templateUrl: './counter-reader.component.html',
-    styleUrls: ['./counter-reader.component.css']
+    styleUrls: ['./counter-reader.component.css'], 
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CounterReaderComponent implements OnInit, OnDestroy {
-    value: number = 0;
-    sub: Subscription = new Subscription();
+export class CounterReaderComponent implements OnInit {
+    stam: number = 10;
 
-    constructor(private counterService: CounterService) { }
+    value$!: Observable<number>;
+
+    constructor(
+        private counterService: CounterService, 
+        private changeDetector: ChangeDetectorRef) { }
 
     ngOnInit(): void {
-        this.sub.add(this.counterService.getValue().subscribe(val => {
-            console.log('value changed to', val);
-            this.value = val
-        }));
+        this.value$ = this.counterService.getValue();
+
+        setTimeout(() =>{
+            this.stam = 20;
+            console.log('changed stam to 20');
+            this.changeDetector.detectChanges();
+        } , 5000);
     }
-
-    ngOnDestroy(): void {
-        this.sub.unsubscribe();
-    }
-
-
 }
