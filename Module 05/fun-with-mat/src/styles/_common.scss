@@ -1,0 +1,7 @@
+@use '@angular/material' as mat;
+@use 'variables' as vars;
+
+@mixin go() {
+    @include mat.core();
+}
+

@@ -1,0 +1,14 @@
+:host {
+    border: 3px solid var(--p800);
+    padding: 10px;
+    background-color: var(--p100);
+
+    h1 {
+        color: var(--p600);
+    }
+
+    p {
+        background-color: var(--p200);
+        padding: 10px;
+    }
+}

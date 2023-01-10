@@ -1,0 +1,14 @@
+$bla: 5;
+$foo: green;
+$bar: 1px solid green;
+
+@function do($a, $b) {
+    @return ($a + $b) * ($a - $b);
+}
+
+@mixin shtuyot() {
+    .bullshit {
+        font-size: 50px;
+        border: 200px dashed brown;
+    }
+}

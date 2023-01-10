@@ -1,0 +1,18 @@
+@use '@angular/material' as mat;
+@use 'variables' as vars;
+
+@mixin go($primary, $accent) {
+    $my-primary: mat.define-palette($primary, 500);
+    $my-accent: mat.define-palette($accent, A200, A100, A400);
+
+    $my-theme: mat.define-light-theme((color: (primary: $my-primary,
+                accent: $my-accent,
+            ),
+            typography: mat.define-typography-config(),
+            density: 0,
+        ));
+
+    @include mat.all-component-themes($my-theme);
+    @include vars.go($my-theme);
+
+}

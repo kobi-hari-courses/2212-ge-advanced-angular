@@ -1,0 +1,69 @@
+@use "sass:list" as list;
+@use "sass:map" as map;
+@use "chadash" as chad;
+
+@include chad.shtuyot();
+@include chad.shtuyot();
+
+
+$ugly_color: #c94f30;
+$ugly_light: lighten($ugly_color, 30%);
+
+$my_list: (1, 2, 3);
+$my_list_2: list.join($my_list, (5, 8, 13));
+
+$my_map: (x: 5, y: 3, 100: 200);
+
+$my_themes: (red: #FF0000, green: #00FF00, yellow: #FFFF00);
+
+
+@debug $my_list_2;
+@debug "my map", $my_map;
+
+@function mult($a, $b) {
+    @return $a * $b;
+}
+
+@mixin generate_class($name, $color) {
+    #{'.' + $name} {
+        @include card($color);
+    }
+}
+
+@mixin card($color) {
+    $light_color: lighten($color, 20%);
+    $dark_color: darken($color, 20%);
+
+    color: $color;
+    background-color: $light_color;
+    border: 1px solid #{$dark_color};
+
+}
+
+@each $key, $value in $my_themes {
+    @include generate_class($key, $value);
+}
+
+$my_font_size: mult(4, 8px);
+
+#bla {
+
+    h1 {
+        color: $ugly_color;
+        text-decoration: $ugly_color underline;
+        background-color: $ugly_light;
+        font-size: $my_font_size;
+
+    }
+
+    p {
+        @include card(red);
+
+        ul {
+            @include card(green);
+            li {
+                color: $ugly_color;
+            }
+        }
+    }
+} // #bla

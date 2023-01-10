@@ -17,6 +17,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "stylePreprocessorOptions": {
+                "includePaths": [
+                    "src/styles"
+                ]
+            },
             "outputPath": "dist/fun-with-mat",
             "index": "src/index.html",
             "main": "src/main.ts",
