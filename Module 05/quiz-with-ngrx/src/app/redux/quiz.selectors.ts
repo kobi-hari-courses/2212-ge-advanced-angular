@@ -5,6 +5,8 @@ const state = createFeatureSelector<QuizState>(QuizFeatureKey);
 
 export const allQuestions = createSelector(state, st => st.questions);
 
+export const questionsCount = createSelector(allQuestions, all => all.length);
+
 export const allAnswers = createSelector(state, st => st.answers);
 
 export const indexOfCurrentQuestion = createSelector(allAnswers, al => al.length);
