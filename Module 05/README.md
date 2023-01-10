@@ -38,3 +38,26 @@ newArray2 = [newValue, ...oldArray];
 * We saw how to use a selector to create observables which we can consume in the components
 
 
+### ScSS and SaSS
+* We talked about **CSS Preprocessors**
+* We saw how to use `ScSS` in Angular
+* We talked about `ScSS` variables 
+* We talked about `ScSS` functions
+* We saw how to use the `ScSS colors` library
+* We talked about `ScSS` mixins
+* We talked about `ScSS` partials
+* We saw how to configure angular where to look for `ScSS` partials
+* We saw how to debug `ScSS`
+
+### Themeing Angular 
+* We understood the concept of `Palette`
+* We saw how to define a theme by selecting 4 values:
+    * The Primary palette
+    * The Secondary (Accent) palette
+    * The Warn Palette (usually red...)
+    * The Foreground and Background palletes (resulting from either light or dark theme).
+* We saw how to run code that converts the selected theme into CSS variables
+
+### The CDK
+* Using Drag & Drop
+* Using Virtual Scrolling
